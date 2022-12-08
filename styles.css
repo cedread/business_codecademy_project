@@ -44,11 +44,7 @@ a {
     height: 4rem;
     background-color: #385170;
     z-index: 2;
-    /*display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;*/
+    /* QQ Dont leave commented out code in your code base! You can always get it back using git (as long as you commit often). */
 }
 
 #nav_bar ul {
