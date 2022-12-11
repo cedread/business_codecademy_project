@@ -36,8 +36,12 @@ a {
     color: #ececec;
 }
 
+h1 {
+    font-size: 2em;
+}
+
 /*Navigation*/
-#nav_bar {
+nav {
     position: fixed;
     top: 0;
     width: 100%;
@@ -47,7 +51,7 @@ a {
     /* QQ Dont leave commented out code in your code base! You can always get it back using git (as long as you commit often). */
 }
 
-#nav_bar ul {
+nav ul {
     list-style: none;
     display: inline;
     width: 50%;   
@@ -56,14 +60,14 @@ a {
     padding: 0.5rem 0;
 }
 
-#nav_bar li {
+nav li {
     display: inline;
     padding: 1.5rem 0;
     color: #ececec;
     padding-right: 5%;
 }
 
-#nav_bar h1 {
+nav h1 {
     font-family: "Zen Dots", serif !important;
     margin: 0 0 0 2%;
     padding: 1rem 0;
@@ -73,16 +77,16 @@ a {
     display: inline;
 }
 
-#nav_bar h1 sup {
+nav h1 sup {
     text-decoration: underline;
 }
 
 @media only screen and (max-width: 720px) {
-    #nav_bar h1 {
+    nav h1 {
         display: none;
     }
 
-    #nav_bar ul {
+    nav ul {
         width: 100%;
         float: none;
         display: flex;
@@ -91,23 +95,23 @@ a {
         padding: 0;
     }
 
-    #nav_bar li {
+    nav li {
         padding: 0;
         margin: 0;
     }
 }
 
 @media only screen and (max-width: 420px) {
-    #nav_bar {
+    nav {
         height: fit-content;
     }
 
-    #nav_bar ul {
+    nav ul {
         margin-right: 1%;
         padding: 0;
     }
 
-    #nav_bar li {
+    nav li {
         padding-right: 0;
         padding-left: 1%;
         font-size: 0.75rem;
@@ -271,6 +275,26 @@ a {
     }
 }
 
+.card { 
+    width: 30%;
+}
+
+.card p {
+    /* QQ - may not be what we want to stick with */
+    margin: 0 10%;
+    line-height: 1.25;
+    font-size: 1.25rem;
+    font-style: italic;
+    opacity: 85%;
+}
+
+.card.blue {
+    background-color: #385170;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: black 1px 1px;
+}
+
 /*Our Services*/
 .services {
     margin-top: 5rem;
@@ -286,29 +310,14 @@ a {
     width: 90%;
 }
 
-.service_container {
-    width: 30%;
-    background-color: #385170;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: black 1px 1px;
-    
+.scaled.img_container {
+    height: 50%;
 }
 
 .img_container {
     width: 90%;
-    height: 50%;
     margin: 1rem auto;
     overflow: hidden;
-}
-
-.service_info {
-    margin: 0 10%;
-    vertical-align: middle;
-    font-style: italic;
-    opacity: 85%;
-    line-height: 1.25;
-    font-size: 1.125rem;
 }
 
 @media only screen and (max-width: 720px) {
@@ -320,7 +329,7 @@ a {
         width: 100%;
     }
 
-    .service_container {
+    .card {
         width: 70%;
         padding: 5% auto;
         margin: 2% auto;
@@ -328,6 +337,7 @@ a {
         
     }
 
+    /* QQ - do we need this */
     .service_info {
         padding-bottom: 2%;
     }
@@ -339,7 +349,7 @@ a {
         padding-top: 7%;
     }
 
-    .service_container {
+    .card {
         width: 90%;
     }
 }
@@ -360,20 +370,7 @@ a {
     width: 90%;
 }
 
-.team_mem {
-    width: 30%;
-    height: fit-content;
-}
-
-.role {
-    margin: 2.5% 7.5%;
-    line-height: 1.25;
-    font-size: 1.25rem;
-    font-style: italic;
-    opacity: 85%;
-    padding: 2% auto;
-}
-
+/* QQ - update with our new class names */
 @media only screen and (max-width: 720px) {
     #team_meet {
         margin-top: 5%;
@@ -385,10 +382,6 @@ a {
     .the_team {
         justify-content: space-between;
     }
-    
-    .team_mem { 
-        width: 45%;
-    }
 }
 
 @media only screen and (max-width: 420px) {
@@ -397,13 +390,11 @@ a {
         padding-top: 8%;
    }
    
-    .team_mem {
+    .card {
         width: 95%;
         margin: 3% auto;
         border-bottom: 2px solid #242730;
     }
-
-    
 }
 
 /*Contact*/
