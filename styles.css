@@ -48,7 +48,6 @@ nav {
     height: 4rem;
     background-color: #385170;
     z-index: 2;
-    /* QQ Dont leave commented out code in your code base! You can always get it back using git (as long as you commit often). */
 }
 
 nav ul {
@@ -280,7 +279,6 @@ nav h1 sup {
 }
 
 .card p {
-    /* QQ - may not be what we want to stick with */
     margin: 0 10%;
     line-height: 1.25;
     font-size: 1.25rem;
@@ -337,7 +335,6 @@ nav h1 sup {
         
     }
 
-    /* QQ - do we need this */
     .service_info {
         padding-bottom: 2%;
     }
@@ -370,7 +367,6 @@ nav h1 sup {
     width: 90%;
 }
 
-/* QQ - update with our new class names */
 @media only screen and (max-width: 720px) {
     #team_meet {
         margin-top: 5%;
