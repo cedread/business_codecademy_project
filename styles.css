@@ -36,22 +36,21 @@ a {
     color: #ececec;
 }
 
+h1 {
+    font-size: 2em;
+}
+
 /*Navigation*/
-#nav_bar {
+nav {
     position: fixed;
     top: 0;
     width: 100%;
     height: 4rem;
     background-color: #385170;
     z-index: 2;
-    /*display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;*/
 }
 
-#nav_bar ul {
+nav ul {
     list-style: none;
     display: inline;
     width: 50%;   
@@ -60,14 +59,14 @@ a {
     padding: 0.5rem 0;
 }
 
-#nav_bar li {
+nav li {
     display: inline;
     padding: 1.5rem 0;
     color: #ececec;
     padding-right: 5%;
 }
 
-#nav_bar h1 {
+nav h1 {
     font-family: "Zen Dots", serif !important;
     margin: 0 0 0 2%;
     padding: 1rem 0;
@@ -77,16 +76,16 @@ a {
     display: inline;
 }
 
-#nav_bar h1 sup {
+nav h1 sup {
     text-decoration: underline;
 }
 
 @media only screen and (max-width: 720px) {
-    #nav_bar h1 {
+    nav h1 {
         display: none;
     }
 
-    #nav_bar ul {
+    nav ul {
         width: 100%;
         float: none;
         display: flex;
@@ -95,23 +94,23 @@ a {
         padding: 0;
     }
 
-    #nav_bar li {
+    nav li {
         padding: 0;
         margin: 0;
     }
 }
 
 @media only screen and (max-width: 420px) {
-    #nav_bar {
+    nav {
         height: fit-content;
     }
 
-    #nav_bar ul {
+    nav ul {
         margin-right: 1%;
         padding: 0;
     }
 
-    #nav_bar li {
+    nav li {
         padding-right: 0;
         padding-left: 1%;
         font-size: 0.75rem;
@@ -127,22 +126,20 @@ a {
     background-repeat: no-repeat;
     background-position: 50% 70%;
     background-size: cover;
-}
-
-.title_container #title {
-    font-size: 2.5rem;
-    padding-top: 5rem;
     color: #ececec;
     text-shadow: black 1px 1px;
 }
 
-.title_container #caption {
+.title_container h1 {
+    font-size: 2.5rem;
+    padding-top: 5rem;
+}
+
+.title_container p {
     font-size: 1.5rem;
     font-style: italic;
     padding-bottom: 5rem;
     margin: 0 auto;
-    color: #ececec;
-    text-shadow: black 1px 1px;
 }
 
 @media only screen and (max-width: 720px)  {
@@ -277,6 +274,25 @@ a {
     }
 }
 
+.card { 
+    width: 30%;
+}
+
+.card p {
+    margin: 0 10%;
+    line-height: 1.25;
+    font-size: 1.25rem;
+    font-style: italic;
+    opacity: 85%;
+}
+
+.card.blue {
+    background-color: #385170;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: black 1px 1px;
+}
+
 /*Our Services*/
 .services {
     margin-top: 5rem;
@@ -289,39 +305,17 @@ a {
     flex-grow: 1;
     margin: 3rem auto;
     justify-content: space-around;
-}
-
-div.service_class#music {
     width: 90%;
 }
 
-div.service_class#hire {
-    width: 90%;
-}
-
-.service_container {
-    width: 30%;
-    background-color: #385170;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: black 1px 1px;
-    
+.scaled.img_container {
+    height: 50%;
 }
 
 .img_container {
     width: 90%;
-    height: 50%;
     margin: 1rem auto;
     overflow: hidden;
-}
-
-.service_info {
-    margin: 0 10%;
-    vertical-align: middle;
-    font-style: italic;
-    opacity: 85%;
-    line-height: 1.25;
-    font-size: 1.125rem;
 }
 
 @media only screen and (max-width: 720px) {
@@ -330,22 +324,15 @@ div.service_class#hire {
         align-items: center;
         margin-bottom: 0;
         margin-top: 0;
+        width: 100%;
     }
 
-    .service_container {
+    .card {
         width: 70%;
         padding: 5% auto;
         margin: 2% auto;
         height: fit-content;
         
-    }
-
-    div.service_class#music {
-        width: 100%;
-    }
-    
-    div.service_class#hire {
-        width: 100%;
     }
 
     .service_info {
@@ -359,7 +346,7 @@ div.service_class#hire {
         padding-top: 7%;
     }
 
-    .service_container {
+    .card {
         width: 90%;
     }
 }
@@ -380,20 +367,6 @@ div.service_class#hire {
     width: 90%;
 }
 
-.team_mem {
-    width: 30%;
-    height: fit-content;
-}
-
-.role {
-    margin: 2.5% 7.5%;
-    line-height: 1.25;
-    font-size: 1.25rem;
-    font-style: italic;
-    opacity: 85%;
-    padding: 2% auto;
-}
-
 @media only screen and (max-width: 720px) {
     #team_meet {
         margin-top: 5%;
@@ -405,10 +378,6 @@ div.service_class#hire {
     .the_team {
         justify-content: space-between;
     }
-    
-    .team_mem { 
-        width: 45%;
-    }
 }
 
 @media only screen and (max-width: 420px) {
@@ -417,13 +386,11 @@ div.service_class#hire {
         padding-top: 8%;
    }
    
-    .team_mem {
+    .card {
         width: 95%;
         margin: 3% auto;
         border-bottom: 2px solid #242730;
     }
-
-    
 }
 
 /*Contact*/
